@@ -1,4 +1,4 @@
-# Phishing URL Detection
+# Phishing URL Detector
 
 A modern AI-inspired phishing URL detection web application built using Python, Flask, JavaScript, HTML, and CSS.
 
@@ -44,13 +44,13 @@ The system analyzes suspicious URLs using heuristic threat detection techniques 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Phishing-URL-Detection.git
+git clone https://github.com/YOUR_USERNAME/Phishing-URL-Detector.git
 ```
 
 Navigate into the project folder:
 
 ```bash
-cd Advanced-Phishing-URL-Detection
+cd Advanced-Phishing-URL-Detector
 ```
 
 Install dependencies:

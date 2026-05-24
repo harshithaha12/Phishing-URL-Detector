@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Advanced Phishing Detection
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div class="container">
+
+    <div class="hero">
+
+        <div class="badge">
+            AI Security Scanner
+        </div>
+
+        <h1>
+            Advanced AI-Based
+            <span>
+                Phishing Detection
+            </span>
+        </h1>
+
+        <p>
+            Real-time phishing URL analysis with intelligent threat detection and modern cybersecurity scanning.
+        </p>
+
+    </div>
+
+    <form method="POST" id="scan-form">
+
+        <input
+            type="text"
+            name="url"
+            id="url-input"
+            placeholder="Enter suspicious website URL..."
+            required
+        >
+
+        <button type="submit" id="scan-button">
+            Scan Threat
+        </button>
+
+    </form>
+
+    <div class="loader" id="loader">
+
+        <div class="loader-line"></div>
+
+        <p>
+            Scanning Threat Intelligence...
+        </p>
+
+    </div>
+
+    {% if result %}
+
+    <div class="result-section">
+
+        <div class="result-box">
+
+            <h2
+                style="color: {{ result.color }}"
+            >
+                {{ result.prediction }}
+            </h2>
+
+            <div class="meter-wrapper">
+
+                <div class="meter-label">
+                    Threat Level
+                </div>
+
+                <div class="meter">
+
+                    <div
+                        class="meter-fill"
+                        style="
+                            width: {{ result.score * 15 }}%;
+                            background: {{ result.color }};
+                        "
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="feature-grid">
+
+            {% for key, value in result.features.items() %}
+
+            <div class="feature-card">
+
+                <h3>
+                    {{ key }}
+                </h3>
+
+                <p>
+                    {{ value }}
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

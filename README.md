@@ -44,7 +44,7 @@ The system analyzes suspicious URLs using heuristic threat detection techniques 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Advanced-Phishing-URL-Detection.git
+git clone https://github.com/YOUR_USERNAME/Phishing-URL-Detection.git
 ```
 
 Navigate into the project folder:
